@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.ui.newWizards">
+      <!-- @generated projetLegoLanguage -->
+      <category
+            id="org.eclipse.emf.ecore.Wizard.category.ID"
+            name="%_UI_Wizard_category"/>
+      <wizard
+            id="fr.univcotedazur.l3ia.projetLegoLanguage.presentation.ProjetLegoLanguageModelWizardID"
+            name="%_UI_ProjetLegoLanguageModelWizard_label"
+            class="fr.univcotedazur.l3ia.projetLegoLanguage.presentation.ProjetLegoLanguageModelWizard"
+            category="org.eclipse.emf.ecore.Wizard.category.ID"
+            icon="icons/full/obj16/ProjetLegoLanguageModelFile.gif">
+         <description>%_UI_ProjetLegoLanguageModelWizard_description</description>
+         <selection class="org.eclipse.core.resources.IResource"/>
+      </wizard>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors">
+      <!-- @generated projetLegoLanguage -->
+      <editor
+            id="fr.univcotedazur.l3ia.projetLegoLanguage.presentation.ProjetLegoLanguageEditorID"
+            name="%_UI_ProjetLegoLanguageEditor_label"
+            icon="icons/full/obj16/ProjetLegoLanguageModelFile.gif"
+            extensions="projetlegolanguage"
+            class="fr.univcotedazur.l3ia.projetLegoLanguage.presentation.ProjetLegoLanguageEditor"
+            contributorClass="fr.univcotedazur.l3ia.projetLegoLanguage.presentation.ProjetLegoLanguageActionBarContributor">
+      </editor>
+   </extension>
+
+</plugin>

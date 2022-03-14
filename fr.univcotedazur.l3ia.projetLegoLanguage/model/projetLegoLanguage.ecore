@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="projetLegoLanguage" nsURI="http://www.example.org/projetLegoLanguage"
+    nsPrefix="projetLegoLanguage">
+  <eClassifiers xsi:type="ecore:EClass" name="Lego" eSuperTypes="#//NamedElement">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="robot" eType="#//Robot"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Robot" eSuperTypes="#//NamedElement">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="moteur" lowerBound="1"
+        upperBound="-1" eType="#//Motor" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="leftmotor" lowerBound="1"
+        eType="#//LeftMotor" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="rightmotor" lowerBound="1"
+        eType="#//RightMotor" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="sensor" upperBound="-1"
+        eType="#//Sensor" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="port" upperBound="-1" eType="#//Port"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="actor" upperBound="-1"
+        eType="#//Actor" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="action" upperBound="-1"
+        eType="#//Action" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Motor" eSuperTypes="#//Actor"/>
+  <eClassifiers xsi:type="ecore:EClass" name="LeftMotor" eSuperTypes="#//Motor"/>
+  <eClassifiers xsi:type="ecore:EClass" name="RightMotor" eSuperTypes="#//Motor"/>
+  <eClassifiers xsi:type="ecore:EClass" name="NamedElement" abstract="true">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Sensor"/>
+  <eClassifiers xsi:type="ecore:EClass" name="ColorSensor" eSuperTypes="#//Sensor"/>
+  <eClassifiers xsi:type="ecore:EClass" name="PositionSensor" eSuperTypes="#//Sensor"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Port" eSuperTypes="#//NamedElement"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Actor" abstract="true"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Action" abstract="true"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Go" eSuperTypes="#//Action"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Right" eSuperTypes="#//Action"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Left" eSuperTypes="#//Action"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Continue" eSuperTypes="#//Action"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Back" eSuperTypes="#//Action"/>
+  <eClassifiers xsi:type="ecore:EClass" name="ShutDown" eSuperTypes="#//Action"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Down" eSuperTypes="#//Action"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Rotate" eSuperTypes="#//Action"/>
+</ecore:EPackage>

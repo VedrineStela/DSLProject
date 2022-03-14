@@ -1,0 +1,16 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: %pluginName
+Bundle-SymbolicName: fr.univcotedazur.l3ia.projetLegoLanguage;singleton:=true
+Automatic-Module-Name: fr.univcotedazur.l3ia.projetLegoLanguage
+Bundle-Version: 0.1.0.qualifier
+Bundle-ClassPath: .
+Bundle-Vendor: %providerName
+Bundle-Localization: plugin
+Bundle-RequiredExecutionEnvironment: J2SE-1.5
+Export-Package: fr.univcotedazur.l3ia.projetLegoLanguage,
+ fr.univcotedazur.l3ia.projetLegoLanguage.impl,
+ fr.univcotedazur.l3ia.projetLegoLanguage.util
+Require-Bundle: org.eclipse.emf.ecore;visibility:=reexport,
+ org.eclipse.core.runtime
+Bundle-ActivationPolicy: lazy

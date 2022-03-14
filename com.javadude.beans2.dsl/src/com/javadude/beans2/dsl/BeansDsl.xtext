@@ -1,0 +1,9 @@
+grammar com.javadude.beans2.dsl.BeansDsl with org.eclipse.xtext.common.Terminals
+
+generate beansDsl "http://www.javadude.com/beans2/dsl/BeansDsl"
+
+Model:
+	greetings+=Greeting*;
+	
+Greeting:
+	'Hello' name=ID '!';

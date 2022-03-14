@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="Tp_03_02_2022" nsURI="http://www.example.org/Tp_03_02_2022"
+    nsPrefix="Tp_03_02_2022">
+  <eClassifiers xsi:type="ecore:EClass" name="Program" eSuperTypes="#//NamedElement">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="statement" upperBound="-1"
+        eType="#//Statement" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="robot" upperBound="-1"
+        eType="#//Robot" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="referencetocolor" upperBound="-1"
+        eType="#//ReferenceToColor" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="variable" upperBound="-1"
+        eType="#//Variable" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Variable" eSuperTypes="#//NamedElement">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="isConst" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="initialValue" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Statement"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Loop" abstract="true" eSuperTypes="#//Statement"/>
+  <eClassifiers xsi:type="ecore:EClass" name="WhileLoop" eSuperTypes="#//Loop">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="expression" lowerBound="1"
+        eType="#//Expression" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="statement" upperBound="-1"
+        eType="#//Statement" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Expression" abstract="true" eSuperTypes="#//Statement"/>
+  <eClassifiers xsi:type="ecore:EClass" name="NamedElement" abstract="true">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="BinaryOperation" abstract="true" eSuperTypes="#//Expression">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="left" lowerBound="1" eType="#//Expression"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="right" lowerBound="1" eType="#//Expression"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="VariableRef" eSuperTypes="#//Reference">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="variable" lowerBound="1"
+        eType="#//Variable"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Assignment" eSuperTypes="#//BinaryOperation"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Comparison" eSuperTypes="#//BinaryOperation"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Substraction" eSuperTypes="#//BinaryOperation"/>
+  <eClassifiers xsi:type="ecore:EClass" name="GreaterThan" eSuperTypes="#//Comparison"/>
+  <eClassifiers xsi:type="ecore:EClass" name="LowerThan" eSuperTypes="#//Comparison"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Equal" eSuperTypes="#//Comparison"/>
+  <eClassifiers xsi:type="ecore:EClass" name="ForLoop" eSuperTypes="#//Loop">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="expression" lowerBound="1"
+        eType="#//Expression" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="statement" upperBound="-1"
+        eType="#//Statement" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Addition" eSuperTypes="#//BinaryOperation"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Multiplication" eSuperTypes="#//BinaryOperation"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Division" eSuperTypes="#//BinaryOperation"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Robot" eSuperTypes="#//NamedElement">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="moteur" upperBound="-1"
+        eType="#//Moteur" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="sensor" upperBound="-1"
+        eType="#//Sensor" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Moteur" abstract="true" eSuperTypes="#//NamedElement">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="initialSpeed" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="port" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="LeftMotor" eSuperTypes="#//Moteur"/>
+  <eClassifiers xsi:type="ecore:EClass" name="RightMotor" eSuperTypes="#//Moteur"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Sensor" abstract="true" eSuperTypes="#//NamedElement">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="sensorPort" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ColorSensor" eSuperTypes="#//Sensor"/>
+  <eClassifiers xsi:type="ecore:EClass" name="PositionSensor" eSuperTypes="#//Sensor"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Actions" abstract="true" eSuperTypes="#//Statement">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="moteur" lowerBound="1"
+        eType="#//Moteur"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="angle" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="speed" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="duration" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Accelerate" eSuperTypes="#//Actions"/>
+  <eClassifiers xsi:type="ecore:EClass" name="IntensitySensor" eSuperTypes="#//Sensor"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Stop" eSuperTypes="#//Actions"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Rotate" abstract="true" eSuperTypes="#//MultipleMotorActions"/>
+  <eClassifiers xsi:type="ecore:EClass" name="TurnOn" eSuperTypes="#//Actions"/>
+  <eClassifiers xsi:type="ecore:EClass" name="LightSensor" eSuperTypes="#//Sensor"/>
+  <eClassifiers xsi:type="ecore:EClass" name="InfraredSensor" eSuperTypes="#//Sensor"/>
+  <eClassifiers xsi:type="ecore:EClass" name="GyroSensor" eSuperTypes="#//Sensor"/>
+  <eClassifiers xsi:type="ecore:EClass" name="GPSSensor" eSuperTypes="#//Sensor"/>
+  <eClassifiers xsi:type="ecore:EClass" name="UltrasonicSensor" eSuperTypes="#//Sensor"/>
+  <eClassifiers xsi:type="ecore:EClass" name="MultipleMotorActions" abstract="true"
+      eSuperTypes="#//Statement">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="leftmotor" lowerBound="1"
+        eType="#//LeftMotor"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="rightmotor" lowerBound="1"
+        eType="#//RightMotor"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="angle" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="speed" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="duration" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Move" eSuperTypes="#//MultipleMotorActions"/>
+  <eClassifiers xsi:type="ecore:EClass" name="LeftRotation" eSuperTypes="#//Rotate"/>
+  <eClassifiers xsi:type="ecore:EClass" name="RightRotation" eSuperTypes="#//Rotate"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Conditionnal" abstract="true" eSuperTypes="#//Statement"/>
+  <eClassifiers xsi:type="ecore:EClass" name="IfCondition" eSuperTypes="#//Conditionnal">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="statement" upperBound="-1"
+        eType="#//Statement" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="expression" lowerBound="1"
+        eType="#//Expression" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="VarInt">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="initialValue" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="VarrString"/>
+  <eClassifiers xsi:type="ecore:EClass" name="ReferenceToColor" eSuperTypes="#//NamedElement">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="colorsensor" lowerBound="1"
+        eType="#//ColorSensor"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ColorRef">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="referencetocolor" lowerBound="1"
+        eType="#//ReferenceToColor"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Reference" eSuperTypes="#//Expression"/>
+  <eClassifiers xsi:type="ecore:EClass" name="ConditionMotor" abstract="true" eSuperTypes="#//Statement"/>
+  <eClassifiers xsi:type="ecore:EClass" name="IfMotor" eSuperTypes="#//ConditionMotor">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="statement" upperBound="-1"
+        eType="#//Statement" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="boolM" lowerBound="1" eType="#//BooleanOperationsOnMotors"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="elsemotor" upperBound="-1"
+        eType="#//ElseMotor" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="BooleanOperationsOnMotors" abstract="true">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="leftC" lowerBound="1" eType="#//ColorRef"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="rightC" lowerBound="1"
+        eType="#//VariableRef" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="EqualM" eSuperTypes="#//BooleanOperationsOnMotors"/>
+  <eClassifiers xsi:type="ecore:EClass" name="GreatherThanM" eSuperTypes="#//BooleanOperationsOnMotors"/>
+  <eClassifiers xsi:type="ecore:EClass" name="ElseMotor" eSuperTypes="#//ConditionMotor">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="statement" upperBound="-1"
+        eType="#//Statement" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="SetThank" eSuperTypes="#//MultipleMotorActions"/>
+  <eClassifiers xsi:type="ecore:EClass" name="MoveLeft" eSuperTypes="#//MultipleMotorActions"/>
+  <eClassifiers xsi:type="ecore:EClass" name="OnForRotation" eSuperTypes="#//Actions"/>
+</ecore:EPackage>

@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel"
+    modelDirectory="/fr.univcotedazur.l3ia.Tp_03_02_2022/src-gen" creationIcons="false"
+    editDirectory="/fr.univcotedazur.l3ia.Tp_03_02_2022.edit/src-gen" editorDirectory="/fr.univcotedazur.l3ia.Tp_03_02_2022.editor/src-gen"
+    modelPluginID="fr.univcotedazur.l3ia.Tp_03_02_2022" modelName="Tp_03_02_2022"
+    rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container" codeFormatting="true"
+    importerID="org.eclipse.emf.importer.ecore" complianceLevel="5.0" copyrightFields="false"
+    operationReflection="true" importOrganizing="true">
+  <foreignModel>Tp_03_02_2022.ecore</foreignModel>
+  <testsDirectory xsi:nil="true"/>
+  <genPackages prefix="Tp_03_02_2022" basePackage="fr.univcotedazur.l3ia" disposableProviderFactory="true"
+      ecorePackage="Tp_03_02_2022.ecore#/">
+    <genClasses ecoreClass="Tp_03_02_2022.ecore#//Program">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Tp_03_02_2022.ecore#//Program/statement"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Tp_03_02_2022.ecore#//Program/robot"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Tp_03_02_2022.ecore#//Program/referencetocolor"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Tp_03_02_2022.ecore#//Program/variable"/>
+    </genClasses>
+    <genClasses ecoreClass="Tp_03_02_2022.ecore#//Variable">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Tp_03_02_2022.ecore#//Variable/isConst"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Tp_03_02_2022.ecore#//Variable/initialValue"/>
+    </genClasses>
+    <genClasses ecoreClass="Tp_03_02_2022.ecore#//Statement"/>
+    <genClasses ecoreClass="Tp_03_02_2022.ecore#//Loop"/>
+    <genClasses ecoreClass="Tp_03_02_2022.ecore#//WhileLoop">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Tp_03_02_2022.ecore#//WhileLoop/expression"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Tp_03_02_2022.ecore#//WhileLoop/statement"/>
+    </genClasses>
+    <genClasses ecoreClass="Tp_03_02_2022.ecore#//Expression"/>
+    <genClasses ecoreClass="Tp_03_02_2022.ecore#//NamedElement">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Tp_03_02_2022.ecore#//NamedElement/name"/>
+    </genClasses>
+    <genClasses ecoreClass="Tp_03_02_2022.ecore#//BinaryOperation">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Tp_03_02_2022.ecore#//BinaryOperation/left"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Tp_03_02_2022.ecore#//BinaryOperation/right"/>
+    </genClasses>
+    <genClasses ecoreClass="Tp_03_02_2022.ecore#//VariableRef">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Tp_03_02_2022.ecore#//VariableRef/variable"/>
+    </genClasses>
+    <genClasses ecoreClass="Tp_03_02_2022.ecore#//Assignment"/>
+    <genClasses ecoreClass="Tp_03_02_2022.ecore#//Comparison"/>
+    <genClasses ecoreClass="Tp_03_02_2022.ecore#//Substraction"/>
+    <genClasses ecoreClass="Tp_03_02_2022.ecore#//GreaterThan"/>
+    <genClasses ecoreClass="Tp_03_02_2022.ecore#//LowerThan"/>
+    <genClasses ecoreClass="Tp_03_02_2022.ecore#//Equal"/>
+    <genClasses ecoreClass="Tp_03_02_2022.ecore#//ForLoop">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Tp_03_02_2022.ecore#//ForLoop/expression"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Tp_03_02_2022.ecore#//ForLoop/statement"/>
+    </genClasses>
+    <genClasses ecoreClass="Tp_03_02_2022.ecore#//Addition"/>
+    <genClasses ecoreClass="Tp_03_02_2022.ecore#//Multiplication"/>
+    <genClasses ecoreClass="Tp_03_02_2022.ecore#//Division"/>
+    <genClasses ecoreClass="Tp_03_02_2022.ecore#//Robot">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Tp_03_02_2022.ecore#//Robot/moteur"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Tp_03_02_2022.ecore#//Robot/sensor"/>
+    </genClasses>
+    <genClasses ecoreClass="Tp_03_02_2022.ecore#//Moteur">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Tp_03_02_2022.ecore#//Moteur/initialSpeed"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Tp_03_02_2022.ecore#//Moteur/port"/>
+    </genClasses>
+    <genClasses ecoreClass="Tp_03_02_2022.ecore#//LeftMotor"/>
+    <genClasses ecoreClass="Tp_03_02_2022.ecore#//RightMotor"/>
+    <genClasses ecoreClass="Tp_03_02_2022.ecore#//Sensor">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Tp_03_02_2022.ecore#//Sensor/sensorPort"/>
+    </genClasses>
+    <genClasses ecoreClass="Tp_03_02_2022.ecore#//ColorSensor"/>
+    <genClasses ecoreClass="Tp_03_02_2022.ecore#//PositionSensor"/>
+    <genClasses ecoreClass="Tp_03_02_2022.ecore#//Actions">
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference Tp_03_02_2022.ecore#//Actions/moteur"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Tp_03_02_2022.ecore#//Actions/angle"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Tp_03_02_2022.ecore#//Actions/speed"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Tp_03_02_2022.ecore#//Actions/duration"/>
+    </genClasses>
+    <genClasses ecoreClass="Tp_03_02_2022.ecore#//Accelerate"/>
+    <genClasses ecoreClass="Tp_03_02_2022.ecore#//IntensitySensor"/>
+    <genClasses ecoreClass="Tp_03_02_2022.ecore#//Stop"/>
+    <genClasses ecoreClass="Tp_03_02_2022.ecore#//Rotate"/>
+    <genClasses ecoreClass="Tp_03_02_2022.ecore#//TurnOn"/>
+    <genClasses ecoreClass="Tp_03_02_2022.ecore#//LightSensor"/>
+    <genClasses ecoreClass="Tp_03_02_2022.ecore#//InfraredSensor"/>
+    <genClasses ecoreClass="Tp_03_02_2022.ecore#//GyroSensor"/>
+    <genClasses ecoreClass="Tp_03_02_2022.ecore#//GPSSensor"/>
+    <genClasses ecoreClass="Tp_03_02_2022.ecore#//UltrasonicSensor"/>
+    <genClasses ecoreClass="Tp_03_02_2022.ecore#//MultipleMotorActions">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Tp_03_02_2022.ecore#//MultipleMotorActions/leftmotor"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Tp_03_02_2022.ecore#//MultipleMotorActions/rightmotor"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Tp_03_02_2022.ecore#//MultipleMotorActions/angle"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Tp_03_02_2022.ecore#//MultipleMotorActions/speed"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Tp_03_02_2022.ecore#//MultipleMotorActions/duration"/>
+    </genClasses>
+    <genClasses ecoreClass="Tp_03_02_2022.ecore#//Move"/>
+    <genClasses ecoreClass="Tp_03_02_2022.ecore#//LeftRotation"/>
+    <genClasses ecoreClass="Tp_03_02_2022.ecore#//RightRotation"/>
+    <genClasses ecoreClass="Tp_03_02_2022.ecore#//Conditionnal"/>
+    <genClasses ecoreClass="Tp_03_02_2022.ecore#//IfCondition">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Tp_03_02_2022.ecore#//IfCondition/statement"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Tp_03_02_2022.ecore#//IfCondition/expression"/>
+    </genClasses>
+    <genClasses ecoreClass="Tp_03_02_2022.ecore#//VarInt">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Tp_03_02_2022.ecore#//VarInt/initialValue"/>
+    </genClasses>
+    <genClasses ecoreClass="Tp_03_02_2022.ecore#//VarrString"/>
+    <genClasses ecoreClass="Tp_03_02_2022.ecore#//ReferenceToColor">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Tp_03_02_2022.ecore#//ReferenceToColor/colorsensor"/>
+    </genClasses>
+    <genClasses ecoreClass="Tp_03_02_2022.ecore#//ColorRef">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Tp_03_02_2022.ecore#//ColorRef/referencetocolor"/>
+    </genClasses>
+    <genClasses ecoreClass="Tp_03_02_2022.ecore#//Reference"/>
+    <genClasses ecoreClass="Tp_03_02_2022.ecore#//ConditionMotor"/>
+    <genClasses ecoreClass="Tp_03_02_2022.ecore#//IfMotor">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Tp_03_02_2022.ecore#//IfMotor/statement"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Tp_03_02_2022.ecore#//IfMotor/boolM"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Tp_03_02_2022.ecore#//IfMotor/elsemotor"/>
+    </genClasses>
+    <genClasses ecoreClass="Tp_03_02_2022.ecore#//BooleanOperationsOnMotors">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Tp_03_02_2022.ecore#//BooleanOperationsOnMotors/leftC"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Tp_03_02_2022.ecore#//BooleanOperationsOnMotors/rightC"/>
+    </genClasses>
+    <genClasses ecoreClass="Tp_03_02_2022.ecore#//EqualM"/>
+    <genClasses ecoreClass="Tp_03_02_2022.ecore#//GreatherThanM"/>
+    <genClasses ecoreClass="Tp_03_02_2022.ecore#//ElseMotor">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Tp_03_02_2022.ecore#//ElseMotor/statement"/>
+    </genClasses>
+    <genClasses ecoreClass="Tp_03_02_2022.ecore#//SetThank"/>
+    <genClasses ecoreClass="Tp_03_02_2022.ecore#//MoveLeft"/>
+    <genClasses ecoreClass="Tp_03_02_2022.ecore#//OnForRotation"/>
+  </genPackages>
+</genmodel:GenModel>

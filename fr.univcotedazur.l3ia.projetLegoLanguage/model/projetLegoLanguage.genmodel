@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel"
+    modelDirectory="/fr.univcotedazur.l3ia.projetLegoLanguage/src-gen"
+    creationIcons="false" editDirectory="/fr.univcotedazur.l3ia.projetLegoLanguage.edit/src-gen"
+    editorDirectory="/fr.univcotedazur.l3ia.projetLegoLanguage.editor/src-gen" modelPluginID="fr.univcotedazur.l3ia.projetLegoLanguage"
+    modelName="ProjetLegoLanguage" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
+    codeFormatting="true" importerID="org.eclipse.emf.importer.ecore" complianceLevel="5.0"
+    copyrightFields="false" operationReflection="true" importOrganizing="true">
+  <foreignModel>projetLegoLanguage.ecore</foreignModel>
+  <testsDirectory xsi:nil="true"/>
+  <genPackages prefix="ProjetLegoLanguage" basePackage="fr.univcotedazur.l3ia" disposableProviderFactory="true"
+      ecorePackage="projetLegoLanguage.ecore#/">
+    <genClasses ecoreClass="projetLegoLanguage.ecore#//Lego">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference projetLegoLanguage.ecore#//Lego/robot"/>
+    </genClasses>
+    <genClasses ecoreClass="projetLegoLanguage.ecore#//Robot">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference projetLegoLanguage.ecore#//Robot/moteur"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference projetLegoLanguage.ecore#//Robot/leftmotor"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference projetLegoLanguage.ecore#//Robot/rightmotor"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference projetLegoLanguage.ecore#//Robot/sensor"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference projetLegoLanguage.ecore#//Robot/port"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference projetLegoLanguage.ecore#//Robot/actor"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference projetLegoLanguage.ecore#//Robot/action"/>
+    </genClasses>
+    <genClasses ecoreClass="projetLegoLanguage.ecore#//Motor"/>
+    <genClasses ecoreClass="projetLegoLanguage.ecore#//LeftMotor"/>
+    <genClasses ecoreClass="projetLegoLanguage.ecore#//RightMotor"/>
+    <genClasses ecoreClass="projetLegoLanguage.ecore#//NamedElement">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute projetLegoLanguage.ecore#//NamedElement/name"/>
+    </genClasses>
+    <genClasses ecoreClass="projetLegoLanguage.ecore#//Sensor"/>
+    <genClasses ecoreClass="projetLegoLanguage.ecore#//ColorSensor"/>
+    <genClasses ecoreClass="projetLegoLanguage.ecore#//PositionSensor"/>
+    <genClasses ecoreClass="projetLegoLanguage.ecore#//Port"/>
+    <genClasses ecoreClass="projetLegoLanguage.ecore#//Actor"/>
+    <genClasses ecoreClass="projetLegoLanguage.ecore#//Action"/>
+    <genClasses ecoreClass="projetLegoLanguage.ecore#//Go"/>
+    <genClasses ecoreClass="projetLegoLanguage.ecore#//Right"/>
+    <genClasses ecoreClass="projetLegoLanguage.ecore#//Left"/>
+    <genClasses ecoreClass="projetLegoLanguage.ecore#//Continue"/>
+    <genClasses ecoreClass="projetLegoLanguage.ecore#//Back"/>
+    <genClasses ecoreClass="projetLegoLanguage.ecore#//ShutDown"/>
+    <genClasses ecoreClass="projetLegoLanguage.ecore#//Down"/>
+    <genClasses ecoreClass="projetLegoLanguage.ecore#//Rotate"/>
+  </genPackages>
+</genmodel:GenModel>

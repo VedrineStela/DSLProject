@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.ui.newWizards">
+      <!-- @generated Tp_03_02_2022 -->
+      <category
+            id="org.eclipse.emf.ecore.Wizard.category.ID"
+            name="%_UI_Wizard_category"/>
+      <wizard
+            id="fr.univcotedazur.l3ia.Tp_03_02_2022.presentation.Tp_03_02_2022ModelWizardID"
+            name="%_UI_Tp_03_02_2022ModelWizard_label"
+            class="fr.univcotedazur.l3ia.Tp_03_02_2022.presentation.Tp_03_02_2022ModelWizard"
+            category="org.eclipse.emf.ecore.Wizard.category.ID"
+            icon="icons/full/obj16/Tp_03_02_2022ModelFile.gif">
+         <description>%_UI_Tp_03_02_2022ModelWizard_description</description>
+         <selection class="org.eclipse.core.resources.IResource"/>
+      </wizard>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors">
+      <!-- @generated Tp_03_02_2022 -->
+      <editor
+            id="fr.univcotedazur.l3ia.Tp_03_02_2022.presentation.Tp_03_02_2022EditorID"
+            name="%_UI_Tp_03_02_2022Editor_label"
+            icon="icons/full/obj16/Tp_03_02_2022ModelFile.gif"
+            extensions="tp_03_02_2022"
+            class="fr.univcotedazur.l3ia.Tp_03_02_2022.presentation.Tp_03_02_2022Editor"
+            contributorClass="fr.univcotedazur.l3ia.Tp_03_02_2022.presentation.Tp_03_02_2022ActionBarContributor">
+      </editor>
+   </extension>
+
+</plugin>
